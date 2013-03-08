@@ -10,19 +10,25 @@
 	</head>
 	
 	<body>					
-	
+		
 		<div id="container">
 			<header>
 				<h1>R/aww Sliding Puzzle Game</h1>
-			</header>
+				<h2>Solve to reveal the caption!</h2>
+			</header>			
 			
 			<canvas id="n-puzzle"></canvas>
+			<h1 class="hidden"><a target="_blank"></a></h1>
+			<form>
+				<input type="submit" value="Show Original" />
+			</form>
 			
-			<div id="image">				
-				<a>
-					<img id="test" title="Hosted by imgur.com" />
+			<div id="image">
+				
+				<a class="hidden" target="_blank">
+					<img id="imgur" title="Hosted by imgur.com" />
 				</a>
-				<h1></h1>				
+								
 			</div>
 
 		</div>
