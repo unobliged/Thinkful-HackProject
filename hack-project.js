@@ -128,10 +128,15 @@ I improve on it by allowing for non-square images (i.e., rectangles) and also us
 		}
 	});
 	
-// Shows the original picture to help in solving the puzzle
-	$('form').submit(function(e){
+// Shows the original picture and/or hints to help solve		
+	$('form#show-pic').submit(function(e){
 		e.preventDefault();
 		$('#image>a').toggleClass('hidden');
+	});
+	
+	$('form#hints').submit(function(e){
+		e.preventDefault();		
+		$('#image>pre').toggleClass('hidden');
 	});
 
 // Clicking and sliding tiles; also checks if puzzle is solved
@@ -184,9 +189,9 @@ I improve on it by allowing for non-square images (i.e., rectangles) and also us
 			alert('You won! Reload to play again.');			
 			$('canvas').unbind('click');
 			$('#container>h1').toggleClass('hidden');
-			$('#container h2').hide();
+			$('#container h3').hide();
 			$('#image a').hide();
-			$('#container>form').hide();
+			$('#forms').hide();
 		} else { answer = ''; }
 	}
 

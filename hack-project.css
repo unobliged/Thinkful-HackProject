@@ -26,6 +26,7 @@ header {
 	padding-top: 16px;
 	font-size: 24px;
 	margin-bottom: 30px;
+	border-bottom: 1px solid;
 }
 
 #container {	
@@ -35,8 +36,8 @@ header {
 	margin: 30px 10%;
 }
 
-#container h2 {
-
+#container h3 {
+	margin-top: 5px;
 }
 
 canvas {	
@@ -44,8 +45,21 @@ canvas {
 	margin: 10px;
 }
 
+form {
+	display: inline-block;
+}
+
+input {
+	padding: 3px;	
+}
+
 #image {
 	margin-top: 15px;
+}
+
+#image pre {
+	text-align: left;
+	margin: 0 20% 20px 20%;
 }
 
 #image img {
