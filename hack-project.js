@@ -128,15 +128,19 @@ I improve on it by allowing for non-square images (i.e., rectangles) and also us
 		}
 	});
 	
-// Shows the original picture and/or hints to help solve		
-	$('form#show-pic').submit(function(e){
+// Shows the directions and original picture
+	$('form#show-pic').click(function(e){
 		e.preventDefault();
 		$('#image>a').toggleClass('hidden');
 	});
 	
-	$('form#hints').submit(function(e){
+	$('form#directions').click(function(e){
 		e.preventDefault();		
-		$('#image>pre').toggleClass('hidden');
+		$('#image>p').toggleClass('hidden');
+		if($(this).children('input').attr('value') == "Hide Directions"){
+			$(this).children('input').attr('value', "Show Directions");
+		} else { $(this).children('input').attr('value', "Hide Directions");
+		}
 	});
 
 // Clicking and sliding tiles; also checks if puzzle is solved

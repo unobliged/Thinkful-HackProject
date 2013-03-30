@@ -15,45 +15,23 @@
 			<header>
 				<h1>R/aww Sliding Puzzle Game</h1>
 				<h3>Solve to reveal the caption!</h3>
-			</header>			
-			
-			<canvas id="n-puzzle"></canvas>
-			<h1 class="hidden"><a target="_blank"></a></h1>
+			</header>	
+
 			<div id="forms">
 				<form id="show-pic">
-					<input type="submit" value="Show Original" />
+					<input type="button" value="Show Original Picture" />
 				</form>
-				<form id="hints">
-					<input type="submit" value="Helpful Hints" />
+				<form id="directions">
+					<input type="button" value="Hide Directions" />
 				</form>
 			</div>
 			
+			<canvas id="n-puzzle"></canvas>
+			<h1 class="hidden"><a target="_blank"></a></h1>
+			
 			<div id="image">
-				<pre class="hidden">
-	    1st Goal: Get top row complete and leave it alone
-	       (!!!): Solve from upper left to bottom right
-	    (A) Get 1 into place by circling around 
-            -below it is just moving clockwise
-		  
-			   4|5|6    8|4|5     1|8|4   
-			   8|2|7 -> 1|2|6 ->  3|2|5
-			   1|3|	    3| |7      |7|6
-	  
-	    (B) Keep 1 in place and get 2 next to it
-		  
-	    1|8|4    1|8|4    1|8|4    1|8|     1| |8    1|2|8
-	    3|2|5 -> 3|2|5 -> 3|2|  -> 3|2|4 -> 3|2|4 -> 3| |4
-	    7| |6    7|6|     7|6|5    7|6|5    7|6|5    7|6|5
-		 
-	    (C) Shift 1 and 2 counterclockwise and get 3 into place
-	  
-	    1|2|8    2| |8    2|3|8    2|3|      |2|3    1|2|3
-	     |3|4 -> 1|3|4 -> 1| |4 -> 1|4|8 -> 1|4|8 ->  |4|8
-	    7|6|5    7|6|5    7|6|5    7|6|5    7|6|5    7|6|5
-	  			
-	    *Keep using the same process to complete the rest!
-				</pre>
-				
+				<p><strong>Directions:</strong> Click on a tile to slide it into the blank space. Try to solve the top row first and then leave it alone; repeat to solve the rest!
+				</p>
 				<a class="hidden" target="_blank">
 					<img id="imgur" title="Hosted by imgur.com" />
 				</a>
